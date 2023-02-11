@@ -7,12 +7,20 @@ const routes = require("./Routes");
 const app = express();
 dotenv.config();
 const corsOptions = {
+<<<<<<< HEAD
 origin: 'http://localhost:3000',
+=======
+  origin: "*",
+>>>>>>> 20ab9f0b56ed483e2cd7e0563ac90185c6a017d2
   credentials: true, //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 };
 app.use(cors(corsOptions));
+<<<<<<< HEAD
 app.use(bodyParser.json());
+=======
+// app.use(bodyParser.json());
+>>>>>>> 20ab9f0b56ed483e2cd7e0563ac90185c6a017d2
 // app.use(bodyParser.urlencoded({ extended: true }));
 // const corsConfig = {
     //     credentials: true,
@@ -42,6 +50,9 @@ const uri = process.env.mongo;
 
 
 app.use(routes);
+// const port = process.env.port;
+// const uri = process.env.mongo;
+
 mongoose
 .connect(uri, () => {
     app.listen(port, () => {

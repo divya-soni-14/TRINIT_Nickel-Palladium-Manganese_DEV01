@@ -112,14 +112,14 @@ function App() {
   }, [init]);
   console.log(authenticated);
   return (
-    <div className="App">
-      <Router>
-        {authenticated && <Navbar />}
-        <Routes>
-          <Route path="/home" element={<HomePage />} />
-          <Route path="/search" element={<SearchPage />} />
+      <div className="App">
+        <Router>
+          {authenticated && <Navbar />}
+          <Routes>
+            <Route path="/home" element={<HomePage />} />
+            <Route path="/search" element={<SearchPage />} />
 
-          <Route path="/createPost" element={<CreatePost />} />
+            <Route path="/createPost" element={<CreatePost />} />
 
           <Route
             path="/login"
@@ -132,6 +132,14 @@ function App() {
           <Route
             path="/project-page"
             element={<ProjectPage project={dummyData} />}
+          />
+          <Route
+            path="/profile-page"
+            element={<ProfilePage profile={profileData} />}
+          />
+          <Route
+            path="/user-profile-page"
+            element={<UserProfilePage user={userProfileData} />}
           />
         </Routes>
       </Router>

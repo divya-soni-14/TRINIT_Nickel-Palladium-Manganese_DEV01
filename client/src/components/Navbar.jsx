@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import useWindowDimensions from "./hooks/useWindowDimensions";
 
 const Navbar = () => {
@@ -12,7 +12,8 @@ const Navbar = () => {
   };
 
   const searchHandler = (searchTerm) => {
-    if (searchTerm !== "") alert("You have searched for " + searchTerm);
+    // if (searchTerm !== "") alert("You have searched for " + searchTerm);
+    // if (0) setNavigate(true);
   };
 
   return (
@@ -32,19 +33,23 @@ const Navbar = () => {
             id=""
             onChange={handleInputChange}
           />
-          <button
-            type="submit"
-            onClick={() => {
-              searchHandler(searchText);
-            }}
-            className="navbar__btn"
-          >
-            S
-          </button>
+          <Link to="/search">
+            <button
+              type="submit"
+              onClick={() => {
+                searchHandler();
+              }}
+              className="navbar__btn"
+            >
+              Search
+            </button>
+          </Link>
         </form>
       </div>
       <div className="navbar__item navbar__mobile navbar__searchBtn">
-        <button className="navbar__btn">Search</button>
+        <Link to="/search">
+          <button className="navbar__btn"> Search</button>
+        </Link>
       </div>
 
       <div className="navbar__item navbar__btnGroup">

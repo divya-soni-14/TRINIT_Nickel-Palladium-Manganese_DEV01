@@ -443,7 +443,7 @@ body {
   background-color: #bebfc0;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1607843137);
   border-radius: 10px;
-  padding: 20px;
+  padding: 30px 15px;
   margin: 15px 10px;
 }
 .project__card--image {
@@ -466,14 +466,14 @@ body {
 }
 .project__card--body .project__font--secondary {
   font-size: 14px;
-  color: rgba(0, 0, 0, 0.6117647059);
+  color: gray;
   text-align: center;
   margin-bottom: 10px;
 }
 .project__card--body .project__font--primary {
   font-size: 20px;
   font-weight: bold;
-  color: #000000;
+  color: black;
   text-align: center;
   margin-bottom: 10px;
 }
@@ -524,7 +524,7 @@ body {
 }
 
 .project__page {
-  padding: 20px;
+  padding: 20px 10%;
 }
 .project__page .project--info {
   font-size: 12px;
@@ -555,7 +555,7 @@ body {
 }
 .project__page .project__layout--grid .project__layout--grid--col1 .project--info__card {
   background-color: #fff;
-  padding: 20px;
+  padding: 2rem;
   margin-bottom: 20px;
   text-align: left;
 }
@@ -698,6 +698,7 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  padding: 10px 10%;
 }
 
 .searchpage__control {
@@ -707,6 +708,11 @@ body {
 .searchpage__filter {
   width: 300px;
   height: 50px !important;
+}
+
+.search__results {
+  display: flex;
+  margin: 10px 10%;
 }
 
 .createpost__container {
@@ -728,6 +734,57 @@ body {
 
 .createpost__form_col .inputField {
   margin: 0 auto;
+}
+
+.profile-page .profile-logo {
+  background-color: lightgray;
+}
+.profile-page .profile-logo img {
+  height: 20vh;
+}
+.profile-page .profile-name {
+  margin: 20px 0;
+  font-weight: bold;
+  font-size: 42px;
+}
+.profile-page .profile-description {
+  display: flex;
+  margin-bottom: 20px;
+}
+.profile-page .profile__project--card {
+  margin: auto;
+  width: 90vw;
+  background-color: aquamarine;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.profile-page .profile__project--card .sub-heading {
+  font-size: 26px;
+  font-weight: bold;
+  text-align: left;
+  margin: 10px;
+  text-decoration: underline;
+}
+.profile-page .profile__project--card .profile__project--grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .profile-page .profile__project--card .profile__project--grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1024px) {
+  .profile-page .profile__project--card .profile__project--grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.project-item {
+  list-style: none;
 }
 
 /*# sourceMappingURL=main.css.map */

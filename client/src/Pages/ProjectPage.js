@@ -31,8 +31,8 @@ const ProjectPage = (props) => {
     <div className="project__page">
       <div className="project--info">
         <span className="project--tag">{tag}</span> |
-        <span className="project--location">{location}</span> |
-        <span className="project--id">Project # {id}</span>
+        <span className="project--location"> {location}</span> |
+        <span className="project--id"> Project # {id}</span>
       </div>
       <div className="project__title">{title}</div>
       <div>

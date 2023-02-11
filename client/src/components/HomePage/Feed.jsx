@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ProjectCard from "../project/ProjectCard";
 
 const dummyData = [
@@ -44,6 +44,19 @@ const dummyData = [
 ];
 
 const Feed = () => {
+  const getProjects = () => {
+    return fetch("http://localhost:8000/getProjects")
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  useEffect(() => {
+    getProjects();
+  }, []);
   return (
     <div className="feed__container card">
       {dummyData.map((project) => (

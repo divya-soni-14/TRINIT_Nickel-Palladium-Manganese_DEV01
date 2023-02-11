@@ -1,0 +1,53 @@
+.profile-page {
+  .profile-logo {
+    background-color: lightgray;
+    img {
+      height: 20vh;
+    }
+  }
+  .profile-name {
+    margin: 20px 0;
+    font-weight: bold;
+    font-size: 42px;
+  }
+  .profile-description {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .profile__project--card {
+    margin: auto;
+    width: 90vw;
+    background-color: aquamarine;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    .sub-heading {
+      font-size: 26px;
+      font-weight: bold;
+      text-align: left;
+      margin: 10px;
+      text-decoration: underline;
+    }
+    .profile__project--grid {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 768px) {
+      .profile__project--grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .profile__project--grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+  }
+}
+
+.project-item {
+  list-style: none;
+}

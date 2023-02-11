@@ -10,6 +10,11 @@ route.post('/createProject', createProject);
 route.get('/getAccounts', getAccounts);
 route.post('/login', login);
 route.post('/isSignedIn', isSignedIn)
+const { createAccount, getAccounts } = require("./Controller/account");
+const { createProject, getAllProjects } = require("./Controller/project");
+
+route.get("/getAccounts", getAccounts);
+route.get("/getAllProjects", getAllProjects);
 // route.post('/fillDB', fillDB);
 
 module.exports = route;
