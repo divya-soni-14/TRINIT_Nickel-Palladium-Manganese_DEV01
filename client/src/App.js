@@ -98,22 +98,29 @@ function App() {
 
             <Route path="/createPost" element={<CreatePost />} />
 
-            <Route
-              path="/login"
-              element={!authenticated ? <Login /> : <Navigate to="/home" />}
-            />
-            <Route
-              path="/register"
-              element={!authenticated ? <Register /> : <Navigate to="/home" />}
-            />
-            <Route
-              path="/project-page"
-              element={<ProjectPage project={dummyData} />}
-            />
-          </Routes>
-        </Router>
-      </div>
-    </Provider>
+          <Route
+            path="/login"
+            element={!authenticated ? <Login /> : <Navigate to="/home" />}
+          />
+          <Route
+            path="/register"
+            element={!authenticated ? <Register /> : <Navigate to="/home" />}
+          />
+          <Route
+            path="/project-page"
+            element={<ProjectPage project={dummyData} />}
+          />
+          <Route
+            path="/profile-page"
+            element={<ProfilePage profile={profileData} />}
+          />
+          <Route
+            path="/user-profile-page"
+            element={<UserProfilePage user={userProfileData} />}
+          />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 
