@@ -1,5 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
 import ProjectCard from "../project/ProjectCard";
 
 const dummyData = [
@@ -52,11 +51,6 @@ const Feed = () => {
       ))}
     </div>
   );
-=======
-
-const Feed = () => {
-  return <div className="feed__container card">Posts Go Here</div>;
->>>>>>> 79f5cc492d6c2746361db403351383cefa27394e
 };
 
 export default Feed;
