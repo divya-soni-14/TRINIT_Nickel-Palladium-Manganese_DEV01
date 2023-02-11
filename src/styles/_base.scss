@@ -1,3 +1,113 @@
-* {
-    background-color: red;
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+// CODE TO RESET BROWSER CSS
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*:focus {
+	outline: none;
+}
+
+// COLORS
+$primary-color: #FFFFFF;
+$secondary-color: #F3F5F7;
+$highlight-color: #FF5C35;
+$secondary-color-darker: #bebfc0;
+$text-primary: black;
+$text-secondary: gray;
+
+// VALUES
+$padding-internal: 10px 20px;
+$margin-internal: 15px 10px;
+$border-radius: 15px; 
+
+
+// FONT FAMILY
+$primary-font-family: 'Manrope', sans-serif;
+
+// Basic Styles
+body {
+    background-color: $secondary-color;
+	font-family: $primary-font-family;
+}
+
+
+.card {
+	background-color: $primary-color;
+    color: black;
+    padding: 20px 20px;
+    margin: $margin-internal;
+    // padding: $padding-internal;
+    border-radius: $border-radius;
+}
+
+
+@media (max-width: 900px) {
+	.hide__mobile {
+		display: none;
+	}
+}
+
+
+.form-field {
+	border: none;
+    background-color: $secondary-color;
+    padding: 7px 15px;
+    width: 250px;
+    border-radius: 25px;
+	font-size: 0.9rem;
+    color: $text-secondary;
+}
+
+.submit_btn {
+	background-color: $highlight-color;
+	border-radius: 30px;
+	font-weight: bold;
+    padding: 12px 60px 12px 60px; 
+    margin-top:30px;
+	border: none;
+    cursor: pointer;
+}
+
+
+

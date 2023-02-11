@@ -1,0 +1,19 @@
+.homepage__container {
+    display: flex;
+    background-color: aquamarine;
+
+}
+
+@media (min-width: 900px) {
+    .homepage__container {
+        padding: 0 10%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 900px) {
+    .homepage__container {
+        justify-content: center !important;
+    }
+}

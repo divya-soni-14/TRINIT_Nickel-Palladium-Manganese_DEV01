@@ -1,5 +1,330 @@
-* {
-  background-color: red;
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  background-color: #F3F5F7;
+  font-family: "Manrope", sans-serif;
+}
+
+.card {
+  background-color: #FFFFFF;
+  color: black;
+  padding: 20px 20px;
+  margin: 15px 10px;
+  border-radius: 15px;
+}
+
+@media (max-width: 900px) {
+  .hide__mobile {
+    display: none;
+  }
+}
+.form-field {
+  border: none;
+  background-color: #F3F5F7;
+  padding: 7px 15px;
+  width: 250px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  color: gray;
+}
+
+.submit_btn {
+  background-color: #FF5C35;
+  border-radius: 30px;
+  font-weight: bold;
+  padding: 12px 60px 12px 60px;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar__container {
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10%;
+  background-color: #FFFFFF;
+}
+
+@media only screen and (max-width: 900px) {
+  .navbar__search {
+    display: none;
+  }
+}
+@media only screen and (min-width: 901px) {
+  .navbar__searchBtn {
+    display: none;
+  }
+}
+.navbar__item {
+  margin: 15px 10px;
+}
+
+.navbar__logo {
+  border: 1px solid black;
+  padding: 3px;
+  font-weight: bolder;
+}
+
+.navbar__btn {
+  padding: 14px 16.5px;
+  margin: 0 5px;
+  background-color: #F3F5F7;
+  border: none;
+  border-radius: 50px;
+}
+.navbar__btn:hover {
+  cursor: pointer;
+  background-color: #bebfc0;
+}
+
+.navbar__searchbox {
+  border: none;
+  background-color: #F3F5F7;
+  padding: 10px 15px;
+  width: 300px;
+  border-radius: 25px;
+  color: gray;
+}
+
+.sidebar__container {
+  width: 15vw;
+}
+
+.sidebar__header {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.sidebar__header__title {
+  font-weight: bold;
+}
+
+.sidebar__header__action {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: gray;
+}
+
+.homepage__container {
+  display: flex;
+  background-color: aquamarine;
+}
+
+@media (min-width: 900px) {
+  .homepage__container {
+    padding: 0 10%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 900px) {
+  .homepage__container {
+    justify-content: center !important;
+  }
+}
+.feed__container {
+  width: 35vw;
+  min-width: 300px !important;
+}
+
+@media (max-width: 900px) {
+  .feed__container {
+    width: 80vw;
+    max-width: 350px;
+    margin: 20px auto;
+  }
+}
+.login__container {
+  display: flex;
+  max-width: 350px;
+  justify-content: center;
+  margin: 15vh auto;
+  padding: 40px 10px;
+}
+
+.login__col {
+  text-align: center;
+}
+
+.login__leftImage {
+  background-image: none;
+}
+
+.login__rightForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.inputField {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.submitButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-field {
+  margin: 10px 0 15px 0;
+  font-size: 0.9rem;
+}
+
+.label {
+  margin: 10px 0 0 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: gray;
+}
+
+.login__title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: gray;
+  margin-bottom: 30px;
+}
+
+.signup-text {
+  margin-top: 15px;
+  font-size: 0.8rem;
+}
+
+.signup__link {
+  font-weight: bold;
+  color: #FF5C35;
+  text-decoration: none;
+}
+.signup__link:hover {
+  cursor: pointer;
+}
+
+.register__container {
+  display: flex;
+  max-width: 350px;
+  justify-content: center;
+  margin: 15vh auto;
+  padding: 40px 10px;
+}
+
+.register__col {
+  text-align: center;
+}
+
+.register__leftImage {
+  background-image: none;
+}
+
+.register__rightForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.inputField {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.submitButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-field {
+  margin: 10px 0 15px 0;
+  font-size: 0.9rem;
+}
+
+.label {
+  margin: 10px 0 0 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: gray;
+}
+
+.register__title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: gray;
+  margin-bottom: 30px;
+}
+
+.signup-text {
+  margin-top: 15px;
+  font-size: 0.8rem;
+}
+
+.signup__link {
+  font-weight: bold;
+  color: #FF5C35;
+  text-decoration: none;
+}
+.signup__link:hover {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */

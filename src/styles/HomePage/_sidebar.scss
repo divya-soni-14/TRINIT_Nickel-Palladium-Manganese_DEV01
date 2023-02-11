@@ -1,0 +1,21 @@
+.sidebar__container {
+    width: 15vw;    
+}
+
+.sidebar__header {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:baseline ;
+}
+
+.sidebar__header__title {
+    font-weight: bold;
+}
+
+.sidebar__header__action {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: $text-secondary;
+}
