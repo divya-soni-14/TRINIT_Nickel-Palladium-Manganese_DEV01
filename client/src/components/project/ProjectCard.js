@@ -30,6 +30,8 @@ const ProjectCard = (props) => {
       </div>
       <div className="project__progress">
         <span className="project__progress--text">{`₹ ${raisedAmount} raised of ₹ ${goalAmount} goal`}</span>
+      </div>
+      <div className="project-progress__bar--bg">
         <div
           className="project-progress__bar"
           style={{ width: `${(raisedAmount / goalAmount) * 100}%` }}

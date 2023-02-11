@@ -79,8 +79,13 @@
       color: #0000009c;
       text-align: center;
     }
-
-    & .project-progress__bar {
+  }
+  .project-progress__bar--bg {
+    margin-top: 15px;
+    width: 100%;
+    background-color: #00000055;
+    border-radius: 5px;
+    .project-progress__bar {
       height: 10px;
       background-color: #0000009c;
       border-radius: 5px;
