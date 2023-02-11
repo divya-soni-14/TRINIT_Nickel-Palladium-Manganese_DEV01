@@ -14,12 +14,12 @@ import {
 import Register from "./components/Register";
 
 function App() {
-  const authenticated = false;
+  const authenticated = true;
   return (
     <div className="App">
       <Router>
+        {authenticated && <Navbar />}
         <Routes>
-          {authenticated && <Navbar />}
           <Route
             path="/home"
             element={authenticated ? <HomePage /> : <Navigate to="/login" />}

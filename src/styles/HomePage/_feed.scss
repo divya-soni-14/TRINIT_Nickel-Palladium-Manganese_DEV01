@@ -1,14 +1,12 @@
 .feed__container {
-    width: 35vw;
-    min-width: 300px !important;
+  width: 35vw;
+  min-width: 300px !important;
 }
 
 @media (max-width: 900px) {
-
-    .feed__container {
-        width: 80vw;
-        max-width: 350px;
-        margin: 20px auto;
-    }
-
+  .feed__container {
+    width: 80vw;
+    max-width: 350px;
+    margin: 20px auto;
+  }
 }
