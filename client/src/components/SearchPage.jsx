@@ -6,22 +6,26 @@ import makeAnimated from "react-select/animated";
 const SearchPage = () => {
   const [filteredData, setFilteredData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [doneCategories, setDoneCategories] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState();
+  const [selectedCategory, setSelectedCategory] = useState([]);
+
   const handleFilter = (event) => {
     setSearchTerm(event.target.value);
     const newFilter = BookData.filter((value) => {
-      return value.title
-        .toString()
-        .toLowerCase()
-        .includes(searchTerm.toString().toLowerCase());
+      let title = value.title.toString().toLowerCase();
+      let searchTerm = searchTerm.toString().toLowerCase();
+      return title.includes(searchTerm);
     });
     setFilteredData(newFilter);
     console.log(filteredData);
   };
 
   const handleCategoryDropDown = (event) => {
-    console.log(event.target.value);
+    let newCategories = [];
+    event.map((cat) => {
+      newCategories.push(cat.value);
+    });
+    setSelectedCategory(newCategories);
+    console.log(newCategories);
   };
 
   const options = [
@@ -40,10 +44,11 @@ const SearchPage = () => {
               type="text"
               name=""
               id=""
-              placeholder="Enter a name...."
+              className="searchpage__input form-field"
+              placeholder="Enter a Name"
               onChange={handleFilter}
             />
-            <button type="submit">Search</button>
+            {/* <button type="submit">Search</button> */}
           </div>
           <div className="searchpage__control searchpage__filter">
             <Select
@@ -51,6 +56,8 @@ const SearchPage = () => {
               components={animatedComponents}
               options={options}
               isMulti
+              placeholder={"Filter by Category"}
+              onChange={handleCategoryDropDown}
             />
           </div>
         </div>

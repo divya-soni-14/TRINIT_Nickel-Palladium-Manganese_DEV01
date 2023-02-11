@@ -13,6 +13,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import SearchPage from "./components/SearchPage";
+import CreatePost from "./components/CreatePost";
 
 function App() {
   const authenticated = true;
@@ -23,6 +24,8 @@ function App() {
         <Routes>
           <Route path="/home" element={<HomePage />} />
           <Route path="/search" element={<SearchPage />} />
+
+          <Route path="/createPost" element={<CreatePost />} />
 
           <Route
             path="/login"

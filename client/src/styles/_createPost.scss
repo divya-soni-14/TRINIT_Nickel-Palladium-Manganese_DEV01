@@ -1,0 +1,21 @@
+.createpost__container {
+  margin: 2rem 20%;
+  padding: 2rem;
+}
+.createpost__form {
+  display: flex !important;
+  //   padding: 0 10%;
+}
+
+.createpost__form_col {
+  flex: 50%;
+  //   border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+  text-align: center;
+}
+
+.createpost__form_col .inputField {
+  margin: 0 auto;
+}
