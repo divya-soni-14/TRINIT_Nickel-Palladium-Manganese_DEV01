@@ -42,6 +42,43 @@ const dummyData = {
     "Our YouTube channel",
   ],
   organization: "SEMA INSANI VE TIBBI YARDIM DERNEGI",
+  donateOptions: [
+    {
+      amount: 25,
+      summary:
+        "Your donation will support 5 displaced patients with primary health care services  Thank You!",
+    },
+    {
+      amount: 50,
+      summary:
+        "Your donation will offer emergency services for one patient each day ... Thank You!",
+    },
+    {
+      amount: 75,
+      summary:
+        "Your donation will support 20 displaced patients with primary health care services  Thank You!",
+    },
+    {
+      amount: 100,
+      summary:
+        "Your donation will help a patient have a high-quality surgery and enable him to work again and feed his children ... Thank you! ",
+    },
+    {
+      amount: 150,
+      summary:
+        "Your donation will support 60 displaced patients with primary health care services  Thank You!",
+    },
+    {
+      amount: 200,
+      summary:
+        "Your benevolence and donation will help 5 patients in the intensive care unit and save their lives  Thank You!",
+    },
+    {
+      amount: 500,
+      summary:
+        "Your donation will support 400 displaced patients with primary health care services  Thank You!",
+    },
+  ],
 };
 
 function App() {

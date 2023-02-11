@@ -1,3 +1,14 @@
+const Item = (props) => {
+  return (
+    <li className="list-item" key={props.id}>
+      <a href="#">
+        <div className="donate--amount">{`₹ ${props.amount}`}</div>
+        <div className="donate--summary">{props.summary}</div>
+      </a>
+    </li>
+  );
+};
+
 const ProjectPage = (props) => {
   const {
     tag,
@@ -14,6 +25,7 @@ const ProjectPage = (props) => {
     impact,
     resources,
     organization,
+    donateOptions,
   } = props.project;
   return (
     <div className="project__page">
@@ -29,20 +41,6 @@ const ProjectPage = (props) => {
       <div className="project__layout--grid">
         <div className="project__layout--grid--col1">
           <div className="project__photo__slider"></div>
-          <div className="project--info__category__flex">
-            <a className="" href="">
-              Story
-            </a>
-            <a className="" href="">
-              Reports
-            </a>
-            <a className="" href="">
-              Photos
-            </a>
-            <a className="" href="">
-              Share
-            </a>
-          </div>
           <div className="project--info__card">
             <h4>Summary</h4>
             <p className="project--info__summary">{summary}</p>
@@ -81,8 +79,32 @@ const ProjectPage = (props) => {
           </div>
         </div>
 
-        <div className="project__layout--grid--col2"></div>
+        <div className="project__layout--grid--col2">
+          <div className="project--info--stats">
+            <div className="raised-amount">₹ {raisedAmount}</div>
+            <span>raised of ₹ {goalAmount} </span>
+            <div className="project-progress__bar--bg">
+              <div
+                className="project-progress__bar"
+                style={{ width: `${(raisedAmount / goalAmount) * 100}%` }}
+              ></div>
+            </div>
+          </div>
+          <div>
+            <a href="#" className="donate--button">
+              Donate Now
+            </a>
+          </div>
+          <div className="donate--options">
+            <ul className="donate--list">
+              {donateOptions.map((donate, id) => (
+                <Item id={id} amount={donate.amount} summary={donate.summary} />
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
+      <div className="project__photos"></div>
     </div>
   );
 };

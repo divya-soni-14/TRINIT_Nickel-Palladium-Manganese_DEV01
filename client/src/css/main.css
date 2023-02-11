@@ -409,7 +409,6 @@ body {
 }
 
 .project__page {
-  font-family: Arial, sans-serif;
   padding: 20px;
 }
 .project__page .project--info {
@@ -430,36 +429,26 @@ body {
   font-style: italic;
 }
 .project__page .project__layout--grid {
+  margin-top: 30px;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 1fr;
   grid-gap: 20px;
 }
 .project__page .project__layout--grid .project__layout--grid--col1 {
   display: flex;
   flex-direction: column;
 }
-.project__page .project__layout--grid .project__layout--grid--col1 .project--info__category__flex {
-  display: flex;
-  margin-bottom: 20px;
-}
-.project__page .project__layout--grid .project__layout--grid--col1 .project--info__category__flex a {
-  font-size: 14px;
-  margin-right: 20px;
-  color: #000;
-  text-decoration: none;
-}
-.project__page .project__layout--grid .project__layout--grid--col1 .project--info__category__flex a:hover {
-  text-decoration: underline;
-}
 .project__page .project__layout--grid .project__layout--grid--col1 .project--info__card {
   background-color: #fff;
   padding: 20px;
   margin-bottom: 20px;
+  text-align: left;
 }
 .project__page .project__layout--grid .project__layout--grid--col1 .project--info__card h4 {
   font-size: 18px;
   font-weight: bold;
   margin-top: 20px;
+  margin-bottom: 10px;
 }
 .project__page .project__layout--grid .project__layout--grid--col1 .project--info__card .project--info__summary {
   font-size: 14px;
@@ -472,6 +461,9 @@ body {
 }
 .project__page .project__layout--grid .project__layout--grid--col1 .project--info__card .project--info__stats div {
   text-align: center;
+  padding: 10px;
+  background-color: aquamarine;
+  border-radius: 10px;
 }
 .project__page .project__layout--grid .project__layout--grid--col1 .project--info__card .project--info__stats div p {
   font-size: 18px;
@@ -514,6 +506,72 @@ body {
 }
 .project__page .project__layout--grid .project__layout--grid--col1 .organization--info__card h3 a:hover {
   text-decoration: underline;
+}
+.project__page .project__layout--grid .project__layout--grid--col2 {
+  display: flex;
+  flex-direction: column;
+}
+.project__page .project__layout--grid .project__layout--grid--col2 .project--info--stats {
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: aquamarine;
+}
+.project__page .project__layout--grid .project__layout--grid--col2 .project-progress__bar--bg {
+  margin-top: 10px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3333333333);
+  border-radius: 5px;
+}
+.project__page .project__layout--grid .project__layout--grid--col2 .project-progress__bar--bg .project-progress__bar {
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.6117647059);
+  border-radius: 5px;
+}
+.project__page .project__layout--grid .project__layout--grid--col2 .donate--button,
+.project__page .project__layout--grid .project__layout--grid--col2 .donate--button:active,
+.project__page .project__layout--grid .project__layout--grid--col2 .donate--button:hover {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  text-decoration: none;
+  background-color: lightcoral;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.project__page .project__layout--grid .project__layout--grid--col2 .donate--options {
+  margin: 30px 0;
+}
+.project__page .project__layout--grid .project__layout--grid--col2 .donate--options .donate--list {
+  display: flex;
+  flex-direction: column;
+  background-color: lightgreen;
+  border-radius: 5px;
+}
+
+.list-item {
+  list-style: none;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 10px;
+}
+.list-item a {
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  justify-content: space-around;
+}
+.list-item a .donate--amount {
+  font-size: 18px;
+  margin: 5px;
+  text-align: left;
+}
+.list-item a .donate--summary {
+  font-size: 14px;
+  text-align: left;
+  margin: 0 10px;
 }
 
 /*# sourceMappingURL=main.css.map */

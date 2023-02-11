@@ -1,5 +1,4 @@
 .project__page {
-  font-family: Arial, sans-serif;
   padding: 20px;
 
   .project--info {
@@ -24,37 +23,24 @@
   }
 
   .project__layout--grid {
+    margin-top: 30px;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     grid-gap: 20px;
 
     .project__layout--grid--col1 {
       display: flex;
       flex-direction: column;
-
-      .project--info__category__flex {
-        display: flex;
-        margin-bottom: 20px;
-        a {
-          font-size: 14px;
-          margin-right: 20px;
-          color: #000;
-          text-decoration: none;
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-      }
-
       .project--info__card {
         background-color: #fff;
         padding: 20px;
         margin-bottom: 20px;
-
+        text-align: left;
         h4 {
           font-size: 18px;
           font-weight: bold;
           margin-top: 20px;
+          margin-bottom: 10px;
         }
 
         .project--info__summary {
@@ -69,6 +55,9 @@
 
           div {
             text-align: center;
+            padding: 10px;
+            background-color: aquamarine;
+            border-radius: 10px;
             p {
               font-size: 18px;
               font-weight: bold;
@@ -101,7 +90,6 @@
       .organization--info__card {
         background-color: #fff;
         padding: 20px;
-
         h4 {
           font-size: 18px;
           font-weight: bold;
@@ -119,6 +107,77 @@
           }
         }
       }
+    }
+
+    .project__layout--grid--col2 {
+      display: flex;
+      flex-direction: column;
+      .project--info--stats {
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        background-color: aquamarine;
+      }
+
+      .project-progress__bar--bg {
+        margin-top: 10px;
+        width: 100%;
+        background-color: #00000055;
+        border-radius: 5px;
+        .project-progress__bar {
+          height: 10px;
+          background-color: #0000009c;
+          border-radius: 5px;
+        }
+      }
+
+      .donate--button,
+      .donate--button:active,
+      .donate--button:hover {
+        display: flex;
+        justify-content: center;
+        padding: 15px;
+        text-decoration: none;
+        background-color: lightcoral;
+        color: white;
+        font-weight: bold;
+        border-radius: 5px;
+      }
+
+      .donate--options {
+        margin: 30px 0;
+        .donate--list {
+          display: flex;
+          flex-direction: column;
+          background-color: lightgreen;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
+
+.list-item {
+  list-style: none;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 10px;
+  a {
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    justify-content: space-around;
+    .donate--amount {
+      font-size: 18px;
+      margin: 5px;
+      text-align: left;
+    }
+
+    .donate--summary {
+      font-size: 14px;
+      text-align: left;
+      margin: 0 10px;
     }
   }
 }
