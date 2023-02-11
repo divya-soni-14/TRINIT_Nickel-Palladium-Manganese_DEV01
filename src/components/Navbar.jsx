@@ -10,9 +10,8 @@ const Navbar = () => {
     setSearchText(e.target.value);
   };
 
-  const searchHandler = (e) => {
-    e.preventDefault();
-    if (searchText !== "") alert("You have searched for " + searchText);
+  const searchHandler = (searchTerm) => {
+    if (searchTerm !== "") alert("You have searched for " + searchTerm);
   };
 
   return (
@@ -30,7 +29,13 @@ const Navbar = () => {
             id=""
             onChange={handleInputChange}
           />
-          <button type="submit" onClick={searchHandler} className="navbar__btn">
+          <button
+            type="submit"
+            onClick={() => {
+              searchHandler(searchText);
+            }}
+            className="navbar__btn"
+          >
             S
           </button>
         </form>

@@ -1,68 +1,53 @@
-
 .navbar__container {
-    height: 3rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 10%;
-    background-color: $primary-color;
-
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10%;
+  background-color: $primary-color;
 }
 
 @media only screen and (max-width: 900px) {
-    .navbar__search {
-        display: none;
-    }
+  .navbar__search {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 901px) {
-
-    .navbar__searchBtn {
-        display: none;
-    }
+  .navbar__searchBtn {
+    display: none;
+  }
 }
 
 .navbar__item {
-    margin: $margin-internal;
+  margin: $margin-internal;
 }
 
 .navbar__logo {
-    border: 1px solid black;
-    padding: 3px;
-    font-weight: bolder;
+  border: 1px solid black;
+  padding: 3px;
+  font-weight: bolder;
 }
 
 .navbar__btn {
-    padding: 14px 16.5px;
-    margin: 0 5px;
-    background-color: $secondary-color;
-    border: none;
-    border-radius: 50px;
+  padding: 14px 16.5px;
+  margin: 0 5px;
+  background-color: $secondary-color;
+  border: none;
+  border-radius: 50px;
 
-    &:hover {
-        cursor: pointer;
-        background-color: $secondary-color-darker;
-    }
+  &:hover {
+    cursor: pointer;
+    background-color: $secondary-color-darker;
+  }
 }
-
 
 .navbar__searchbox {
-    border: none;
-    background-color: $secondary-color;
-    padding: 10px 15px;
-    width: 300px;
-    border-radius: 25px;
-    color: $text-secondary;
-    
+  border: none;
+  background-color: $secondary-color;
+  padding: 10px 15px;
+  width: 300px;
+  border-radius: 25px;
+  color: $text-secondary;
 }
-
-
-
-
-
-
-
-
-
-
