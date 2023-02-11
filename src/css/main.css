@@ -408,4 +408,112 @@ body {
   border-radius: 5px;
 }
 
+.project__page {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+.project__page .project--info {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 20px;
+}
+.project__page .project--info .project--tag {
+  font-weight: bold;
+  color: #000;
+}
+.project__page .project__title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.project__page .project__author {
+  font-style: italic;
+}
+.project__page .project__layout--grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 20px;
+}
+.project__page .project__layout--grid .project__layout--grid--col1 {
+  display: flex;
+  flex-direction: column;
+}
+.project__page .project__layout--grid .project__layout--grid--col1 .project--info__category__flex {
+  display: flex;
+  margin-bottom: 20px;
+}
+.project__page .project__layout--grid .project__layout--grid--col1 .project--info__category__flex a {
+  font-size: 14px;
+  margin-right: 20px;
+  color: #000;
+  text-decoration: none;
+}
+.project__page .project__layout--grid .project__layout--grid--col1 .project--info__category__flex a:hover {
+  text-decoration: underline;
+}
+.project__page .project__layout--grid .project__layout--grid--col1 .project--info__card {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.project__page .project__layout--grid .project__layout--grid--col1 .project--info__card h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.project__page .project__layout--grid .project__layout--grid--col1 .project--info__card .project--info__summary {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.project__page .project__layout--grid .project__layout--grid--col1 .project--info__card .project--info__stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.project__page .project__layout--grid .project__layout--grid--col1 .project--info__card .project--info__stats div {
+  text-align: center;
+}
+.project__page .project__layout--grid .project__layout--grid--col1 .project--info__card .project--info__stats div p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.project__page .project__layout--grid .project__layout--grid--col1 .project--info__card .project--info__stats div span {
+  font-size: 12px;
+  color: #555;
+}
+.project__page .project__layout--grid .project__layout--grid--col1 .project--info__card .project--info__challenge,
+.project__page .project__layout--grid .project__layout--grid--col1 .project--info__card .project--info__solution,
+.project__page .project__layout--grid .project__layout--grid--col1 .project--info__card .project--info__impact {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.project__page .project__layout--grid .project__layout--grid--col1 .project--info__card .project--info__resources {
+  font-size: 14px;
+  list-style-type: square;
+  margin-left: 20px;
+}
+.project__page .project__layout--grid .project__layout--grid--col1 .project--info__card .project--info__resources li {
+  margin-bottom: 10px;
+}
+.project__page .project__layout--grid .project__layout--grid--col1 .organization--info__card {
+  background-color: #fff;
+  padding: 20px;
+}
+.project__page .project__layout--grid .project__layout--grid--col1 .organization--info__card h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.project__page .project__layout--grid .project__layout--grid--col1 .organization--info__card h3 {
+  font-size: 24px;
+}
+.project__page .project__layout--grid .project__layout--grid--col1 .organization--info__card h3 a {
+  color: #000;
+  text-decoration: none;
+}
+.project__page .project__layout--grid .project__layout--grid--col1 .organization--info__card h3 a:hover {
+  text-decoration: underline;
+}
+
 /*# sourceMappingURL=main.css.map */

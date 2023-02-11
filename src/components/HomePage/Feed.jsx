@@ -12,7 +12,7 @@ const dummyData = [
     author: "SEMA INSANI VE TIBBI YARDIM DERNEGI",
     description:
       "This campaign aims to support URGENT medical needs of those most in need in northern Syria through supporting our hospitals, medical centers and mobile clinics located there",
-    raisedAmount: 5025,
+    raisedAmount: 50250,
     goalAmount: 100000,
   },
   {

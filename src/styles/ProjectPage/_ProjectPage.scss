@@ -1,0 +1,124 @@
+.project__page {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+
+  .project--info {
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 20px;
+
+    .project--tag {
+      font-weight: bold;
+      color: #000;
+    }
+  }
+
+  .project__title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .project__author {
+    font-style: italic;
+  }
+
+  .project__layout--grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+
+    .project__layout--grid--col1 {
+      display: flex;
+      flex-direction: column;
+
+      .project--info__category__flex {
+        display: flex;
+        margin-bottom: 20px;
+        a {
+          font-size: 14px;
+          margin-right: 20px;
+          color: #000;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .project--info__card {
+        background-color: #fff;
+        padding: 20px;
+        margin-bottom: 20px;
+
+        h4 {
+          font-size: 18px;
+          font-weight: bold;
+          margin-top: 20px;
+        }
+
+        .project--info__summary {
+          font-size: 14px;
+          margin-bottom: 20px;
+        }
+
+        .project--info__stats {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 20px;
+
+          div {
+            text-align: center;
+            p {
+              font-size: 18px;
+              font-weight: bold;
+              margin-bottom: 5px;
+            }
+            span {
+              font-size: 12px;
+              color: #555;
+            }
+          }
+        }
+
+        .project--info__challenge,
+        .project--info__solution,
+        .project--info__impact {
+          font-size: 14px;
+          margin-bottom: 20px;
+        }
+
+        .project--info__resources {
+          font-size: 14px;
+          list-style-type: square;
+          margin-left: 20px;
+          li {
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+      .organization--info__card {
+        background-color: #fff;
+        padding: 20px;
+
+        h4 {
+          font-size: 18px;
+          font-weight: bold;
+          margin-bottom: 20px;
+        }
+
+        h3 {
+          font-size: 24px;
+          a {
+            color: #000;
+            text-decoration: none;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}
