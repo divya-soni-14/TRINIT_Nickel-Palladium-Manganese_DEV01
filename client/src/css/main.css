@@ -443,7 +443,7 @@ body {
   background-color: #bebfc0;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1607843137);
   border-radius: 10px;
-  padding: 20px;
+  padding: 30px 15px;
   margin: 15px 10px;
 }
 .project__card--image {
@@ -466,14 +466,14 @@ body {
 }
 .project__card--body .project__font--secondary {
   font-size: 14px;
-  color: rgba(0, 0, 0, 0.6117647059);
+  color: gray;
   text-align: center;
   margin-bottom: 10px;
 }
 .project__card--body .project__font--primary {
   font-size: 20px;
   font-weight: bold;
-  color: #000000;
+  color: black;
   text-align: center;
   margin-bottom: 10px;
 }
@@ -524,7 +524,7 @@ body {
 }
 
 .project__page {
-  padding: 20px;
+  padding: 20px 10%;
 }
 .project__page .project--info {
   font-size: 12px;
@@ -555,7 +555,7 @@ body {
 }
 .project__page .project__layout--grid .project__layout--grid--col1 .project--info__card {
   background-color: #fff;
-  padding: 20px;
+  padding: 2rem;
   margin-bottom: 20px;
   text-align: left;
 }

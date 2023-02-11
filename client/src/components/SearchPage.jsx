@@ -8,7 +8,6 @@ const SearchPage = () => {
   const [filteredData, setFilteredData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState([]);
-
   const handleFilter = (event) => {
     setSearchTerm(event.target.value);
     const newFilter = BookData.filter((value) => {
@@ -36,7 +35,7 @@ const SearchPage = () => {
       let ans = 0;
       newCategories.map((cat) => {
         let compareTerm = cat.toLowerCase();
-        if (value.includes(compareTerm)) ans = 1;
+        if (value.includes(compareTerm)) return 1;
       });
       return ans;
     });
