@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import useWindowDimensions from "./hooks/useWindowDimensions";
 
 const Navbar = () => {
@@ -17,7 +18,9 @@ const Navbar = () => {
   return (
     <div className="navbar__container">
       <div className="navbar__logo navbar__item">
-        <h2>npm fund </h2>
+        <Link to="/home">
+          <h2>npm fund </h2>
+        </Link>
       </div>
       <div className="navbar__item navbar__search">
         <form>

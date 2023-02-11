@@ -1,17 +1,85 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -21,8 +89,17 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -30,16 +107,20 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: "";
   content: none;
 }
@@ -54,12 +135,12 @@ table {
 }
 
 body {
-  background-color: #F3F5F7;
+  background-color: #f3f5f7;
   font-family: "Manrope", sans-serif;
 }
 
 .card {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: black;
   padding: 20px 20px;
   margin: 15px 10px;
@@ -71,9 +152,16 @@ body {
     display: none;
   }
 }
+.form-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: gray;
+  margin-bottom: 30px;
+}
+
 .form-field {
   border: none;
-  background-color: #F3F5F7;
+  background-color: #f3f5f7;
   padding: 7px 15px;
   width: 250px;
   border-radius: 25px;
@@ -82,7 +170,7 @@ body {
 }
 
 .submit_btn {
-  background-color: #FF5C35;
+  background-color: #ff5c35;
   border-radius: 30px;
   font-weight: bold;
   padding: 12px 60px 12px 60px;
@@ -98,7 +186,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 10px 10%;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 @media only screen and (max-width: 900px) {
@@ -124,7 +212,7 @@ body {
 .navbar__btn {
   padding: 14px 16.5px;
   margin: 0 5px;
-  background-color: #F3F5F7;
+  background-color: #f3f5f7;
   border: none;
   border-radius: 50px;
 }
@@ -135,7 +223,7 @@ body {
 
 .navbar__searchbox {
   border: none;
-  background-color: #F3F5F7;
+  background-color: #f3f5f7;
   padding: 10px 15px;
   width: 300px;
   border-radius: 25px;
@@ -253,7 +341,7 @@ body {
 
 .signup__link {
   font-weight: bold;
-  color: #FF5C35;
+  color: #ff5c35;
   text-decoration: none;
 }
 .signup__link:hover {
@@ -321,7 +409,7 @@ body {
 
 .signup__link {
   font-weight: bold;
-  color: #FF5C35;
+  color: #ff5c35;
   text-decoration: none;
 }
 .signup__link:hover {
@@ -366,6 +454,27 @@ body {
 .searchpage__filter {
   width: 300px;
   height: 50px !important;
+}
+
+.createpost__container {
+  margin: 2rem 20%;
+  padding: 2rem;
+}
+
+.createpost__form {
+  display: flex !important;
+}
+
+.createpost__form_col {
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+  text-align: center;
+}
+
+.createpost__form_col .inputField {
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=main.css.map */
