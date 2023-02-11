@@ -84,7 +84,7 @@ const dummyData = {
 };
 
 function App() {
-  const authenticated = true;
+  const authenticated = false;
   return (
     <div className="App">
       <Router>
