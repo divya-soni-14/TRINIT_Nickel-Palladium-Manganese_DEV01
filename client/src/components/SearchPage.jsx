@@ -4,6 +4,7 @@ import BookData from "../data.json";
 import makeAnimated from "react-select/animated";
 
 const SearchPage = () => {
+  const [nameFilteredData, setNameFiltered] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState([]);
@@ -15,8 +16,9 @@ const SearchPage = () => {
       let newSearchTerm = searchTerm.toString().toLowerCase();
       return title.includes(newSearchTerm);
     });
+    setNameFiltered(newFilter);
     setFilteredData(newFilter);
-    console.log(filteredData);
+    console.log(newFilter);
   };
 
   const handleCategoryDropDown = (event) => {
@@ -27,12 +29,25 @@ const SearchPage = () => {
     setSelectedCategory(newCategories);
     console.log(newCategories);
 
-    selectedCategory.forEach((element) => {});
+    let currData = nameFilteredData.length > 0 ? nameFilteredData : BookData;
+    console.log(currData, filteredData.length);
+    let newCurrData = currData.filter((item) => {
+      let value = item.author.toLowerCase();
+      let ans = 0;
+      newCategories.map((cat) => {
+        let compareTerm = cat.toLowerCase();
+        if (value.includes(compareTerm)) ans = 1;
+      });
+      return ans;
+    });
+
+    currData = newCurrData;
+    setFilteredData(currData);
   };
 
   const options = [
     { value: "George Eliot", label: "George Eliot" },
-    { value: "strawberry", label: "Strawberry" },
+    { value: "Shakespeare", label: "Shakespeare" },
     { value: "vanilla", label: "Vanilla" },
   ];
   const animatedComponents = makeAnimated();
