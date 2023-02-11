@@ -73,7 +73,7 @@ const createNGO = async (req, res) => {
 }
 
 exports.createAccount = async (req, res) => {
-    console.log(req.body);
+        console.log(req.body);
         const hasher = async() => {
             return await bcrypt.hash(req.body.password,12);
         }
@@ -125,6 +125,7 @@ exports.createAccount = async (req, res) => {
 }
 
 exports.getAccounts = (req,res) => {
+    console.log("HIT");
     Account.find().then((accounts)=>{
         res.status(200).json(accounts);
     }).catch(err => {

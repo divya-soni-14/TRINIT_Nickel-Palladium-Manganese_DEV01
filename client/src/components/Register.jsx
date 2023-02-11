@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import CreateAccount from "../Connections/CreateAccount";
 import GetAccounts from "../Connections/GetAccounts";
 import useInput from "../hooks/use-input";
@@ -10,7 +10,9 @@ const Register = () => {
 
   const [step,setStep] = useState(0);
   const [isNGO, setIsNGO] = useState(0);
+  const [message, setMessage] = useState(null);
   let regex = new RegExp("[a-z0-9]+@[a-z]+.[a-z]{2,3}");
+  const navigate = useNavigate();
   const {
     value: enteredName,
     isValid: enteredNameIsValid,
@@ -102,21 +104,26 @@ const Register = () => {
       !enteredDescriptionIsValid
     )
       {
-        console.log("bruh");
+        setMessage("Error in Form Filling");
         return;
       }
 
-    // const response = await CreateAccount({
-    //   email: enteredEmail,
-    //   password: enteredPassword,
-    //   description : enteredDescription,
-    //   contact : enteredContact,
-    //   type: isNGO ? 'ngo' : 'user',
-    //   address: enteredAddress,
-    //   name: enteredName
-    // });
-    const response = await GetAccounts();
+    const response = await CreateAccount({
+      email: enteredEmail,
+      password: enteredPassword,
+      description : enteredDescription,
+      contact : enteredContact,
+      type: isNGO ? 'ngo' : 'user',
+      address: enteredAddress,
+      name: enteredName
+    });
     console.log(response);
+    setMessage(response.message ? response.message : "Account Created Successfully");
+    if(response.success){
+      setTimeout(() => {
+        navigate('/login');
+      }, 2000)
+    }
   }
 
   return (
@@ -149,6 +156,16 @@ const Register = () => {
             RePasswordChangeHandler={RePasswordChangeHandler}
             enteredRePassword={enteredRePassword}
           />}
+          <p className="signup-text">
+              Already have an account?{" "}
+              <a>
+                <Link className="signup__link" to="/login">
+                  Login!
+                </Link>
+              </a>
+          </p>
+          { message && 
+            <p className="signup-text">{message}</p>}
       </form>
     </div>
   );

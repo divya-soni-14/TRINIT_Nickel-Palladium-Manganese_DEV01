@@ -7,6 +7,8 @@ import ProjectPage from "./Pages/ProjectPage";
 import Register from "./components/Register";
 import SearchPage from "./components/SearchPage";
 import CreatePost from "./components/CreatePost";
+import { useSelector, useDispatch } from 'react-redux';
+import { useCookies } from "react-cookie";
 import "./css/main.css";
 import {
   BrowserRouter as Router,
@@ -15,6 +17,9 @@ import {
   useLocation,
   Navigate,
 } from "react-router-dom";
+import { authActions } from "./store/auth";
+import { useCallback, useEffect } from "react";
+import IsSignedIn from "./Connections/IsSignedIn";
 
 const dummyData = {
   id: 0,
@@ -84,7 +89,28 @@ const dummyData = {
 };
 
 function App() {
-  const authenticated = false;
+  let authenticated = useSelector((state) => state.auth.isAuthenticated);
+  let account = useSelector((state) => state.auth.account);
+  let type = useSelector((state) => state.auth.type);
+  const dispatch = useDispatch();
+  const [cookies, setCookie, removeCookie] = useCookies();
+
+
+  const init = useCallback(async () => {
+    // console.log(cookies.token + ' ' + typeof(cookies.token));
+    await IsSignedIn({token: cookies.token}).then((response) => {
+      console.log(response);
+      if (response.isLoggedIn) {
+        dispatch(authActions.login({account: response.account, type: response.type}));
+      }
+    });
+  }, []);
+
+
+  useEffect(() => {
+    init();
+  }, [init]);
+  console.log(authenticated);
   return (
     <div className="App">
       <Router>

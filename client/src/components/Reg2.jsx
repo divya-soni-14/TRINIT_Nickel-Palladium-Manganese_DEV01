@@ -52,14 +52,6 @@ const Reg2 = (props) => {
           <div className="submitButton">
             <button className="submit_btn" onClick={props.stepChanger}>Back</button>
             <button className="submit_btn" onClick={props.signuphandler}>Register</button>
-            <p className="signup-text">
-              Already have an account?{" "}
-              <a>
-                <Link className="signup__link" to="/login">
-                  Login!
-                </Link>
-              </a>
-            </p>
           </div>
         </div>
   )
