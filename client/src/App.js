@@ -15,7 +15,7 @@ import {
 import SearchPage from "./components/SearchPage";
 
 function App() {
-  const authenticated = true;
+  const authenticated = false;
   return (
     <div className="App">
       <Router>
