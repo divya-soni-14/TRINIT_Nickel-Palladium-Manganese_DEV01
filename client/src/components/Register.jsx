@@ -51,13 +51,21 @@ const Register = () => {
               id=""
             />
           </div>
+          <div className="checkboxField">
+            <p className="checkbox__radio_text">Are you an NGO? </p>
+            <span className="checkbox__radio_btns">
+              Yes
+              <input type="radio" name="isNGO" id="" /> No
+              <input type="radio" name="isNGO" id="" />
+            </span>
+          </div>
 
           <div className="submitButton">
             <button className="submit_btn">Register</button>
             <p className="signup-text">
               Already have an account?{" "}
               <a>
-                <Link className="signup__link" to="/register">
+                <Link className="signup__link" to="/login">
                   Login!
                 </Link>
               </a>

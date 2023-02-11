@@ -4,6 +4,9 @@ import Navbar from "./components/Navbar";
 import HomePage from "./Pages/HomePage";
 import Login from "./components/Login/Login";
 import ProjectPage from "./Pages/ProjectPage";
+import Register from "./components/Register";
+import SearchPage from "./components/SearchPage";
+import CreatePost from "./components/CreatePost";
 import "./css/main.css";
 import {
   BrowserRouter as Router,
@@ -12,7 +15,6 @@ import {
   useLocation,
   Navigate,
 } from "react-router-dom";
-import Register from "./components/Register";
 
 const dummyData = {
   id: 0,
@@ -88,10 +90,11 @@ function App() {
       <Router>
         {authenticated && <Navbar />}
         <Routes>
-          <Route
-            path="/home"
-            element={authenticated ? <HomePage /> : <Navigate to="/login" />}
-          />
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/search" element={<SearchPage />} />
+
+          <Route path="/createPost" element={<CreatePost />} />
+
           <Route
             path="/login"
             element={!authenticated ? <Login /> : <Navigate to="/home" />}

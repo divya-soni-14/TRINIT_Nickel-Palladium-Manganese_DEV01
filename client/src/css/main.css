@@ -1,17 +1,85 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -21,8 +89,17 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -30,16 +107,20 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: "";
   content: none;
 }
@@ -54,12 +135,12 @@ table {
 }
 
 body {
-  background-color: #F3F5F7;
+  background-color: #f3f5f7;
   font-family: "Manrope", sans-serif;
 }
 
 .card {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: black;
   padding: 20px 20px;
   margin: 15px 10px;
@@ -71,9 +152,16 @@ body {
     display: none;
   }
 }
+.form-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: gray;
+  margin-bottom: 30px;
+}
+
 .form-field {
   border: none;
-  background-color: #F3F5F7;
+  background-color: #f3f5f7;
   padding: 7px 15px;
   width: 250px;
   border-radius: 25px;
@@ -82,7 +170,7 @@ body {
 }
 
 .submit_btn {
-  background-color: #FF5C35;
+  background-color: #ff5c35;
   border-radius: 30px;
   font-weight: bold;
   padding: 12px 60px 12px 60px;
@@ -98,7 +186,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 10px 10%;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 @media only screen and (max-width: 900px) {
@@ -124,7 +212,7 @@ body {
 .navbar__btn {
   padding: 14px 16.5px;
   margin: 0 5px;
-  background-color: #F3F5F7;
+  background-color: #f3f5f7;
   border: none;
   border-radius: 50px;
 }
@@ -135,7 +223,7 @@ body {
 
 .navbar__searchbox {
   border: none;
-  background-color: #F3F5F7;
+  background-color: #f3f5f7;
   padding: 10px 15px;
   width: 300px;
   border-radius: 25px;
@@ -253,7 +341,7 @@ body {
 
 .signup__link {
   font-weight: bold;
-  color: #FF5C35;
+  color: #ff5c35;
   text-decoration: none;
 }
 .signup__link:hover {
@@ -264,7 +352,7 @@ body {
   display: flex;
   max-width: 350px;
   justify-content: center;
-  margin: 15vh auto;
+  margin: 5vh auto;
   padding: 40px 10px;
 }
 
@@ -289,6 +377,7 @@ body {
 }
 
 .submitButton {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -320,258 +409,72 @@ body {
 
 .signup__link {
   font-weight: bold;
-  color: #FF5C35;
+  color: #ff5c35;
   text-decoration: none;
 }
 .signup__link:hover {
   cursor: pointer;
 }
 
-.project__card {
+.checkboxField {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #bebfc0;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1607843137);
-  border-radius: 10px;
-  padding: 20px;
-  margin: 15px 10px;
-}
-.project__card--image {
-  width: 100%;
-  height: 250px;
-  overflow: hidden;
-  border-radius: 15px;
-}
-.project__card--image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.project__card--body {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px 0;
-}
-.project__card--body .project__font--secondary {
-  font-size: 14px;
-  color: rgba(0, 0, 0, 0.6117647059);
-  text-align: center;
-  margin-bottom: 10px;
-}
-.project__card--body .project__font--primary {
-  font-size: 20px;
-  font-weight: bold;
-  color: #000000;
-  text-align: center;
-  margin-bottom: 10px;
-}
-.project__card--body .project__font {
-  font-size: 16px;
-  color: #000000;
-  text-align: center;
-  margin-bottom: 10px;
-}
-.project__card--body .project__font span {
-  font-weight: bold;
-}
-.project__card .project__font {
-  font-size: 14px;
-  color: rgba(0, 0, 0, 0.6117647059);
-  text-align: center;
-  margin-bottom: 10px;
-}
-.project__card .project__font a {
-  font-size: 14px;
-  color: rgba(0, 0, 0, 0.6117647059);
-  text-decoration: underline;
-}
-.project__card .project__font a:hover {
-  color: #000000;
-}
-.project__card .project__progress {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-.project__card .project__progress--text {
-  font-size: 14px;
-  color: rgba(0, 0, 0, 0.6117647059);
-  text-align: center;
-}
-.project__card .project__progress .project-progress__bar {
-  height: 10px;
-  background-color: rgba(0, 0, 0, 0.6117647059);
-  border-radius: 5px;
+  flex-direction: row;
+  align-items: start;
 }
 
-.project__page {
-  padding: 20px;
-}
-.project__page .project--info {
-  font-size: 12px;
-  color: #555;
-  margin-bottom: 20px;
-}
-.project__page .project--info .project--tag {
-  font-weight: bold;
-  color: #000;
-}
-.project__page .project__title {
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-.project__page .project__author {
-  font-style: italic;
-}
-.project__page .project__layout--grid {
-  margin-top: 30px;
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  grid-gap: 20px;
-}
-.project__page .project__layout--grid .project__layout--grid--col1 {
-  display: flex;
-  flex-direction: column;
-}
-.project__page .project__layout--grid .project__layout--grid--col1 .project--info__card {
-  background-color: #fff;
-  padding: 20px;
-  margin-bottom: 20px;
-  text-align: left;
-}
-.project__page .project__layout--grid .project__layout--grid--col1 .project--info__card h4 {
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-.project__page .project__layout--grid .project__layout--grid--col1 .project--info__card .project--info__summary {
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-.project__page .project__layout--grid .project__layout--grid--col1 .project--info__card .project--info__stats {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-.project__page .project__layout--grid .project__layout--grid--col1 .project--info__card .project--info__stats div {
-  text-align: center;
-  padding: 10px;
-  background-color: aquamarine;
-  border-radius: 10px;
-}
-.project__page .project__layout--grid .project__layout--grid--col1 .project--info__card .project--info__stats div p {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-.project__page .project__layout--grid .project__layout--grid--col1 .project--info__card .project--info__stats div span {
-  font-size: 12px;
-  color: #555;
-}
-.project__page .project__layout--grid .project__layout--grid--col1 .project--info__card .project--info__challenge,
-.project__page .project__layout--grid .project__layout--grid--col1 .project--info__card .project--info__solution,
-.project__page .project__layout--grid .project__layout--grid--col1 .project--info__card .project--info__impact {
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-.project__page .project__layout--grid .project__layout--grid--col1 .project--info__card .project--info__resources {
-  font-size: 14px;
-  list-style-type: square;
-  margin-left: 20px;
-}
-.project__page .project__layout--grid .project__layout--grid--col1 .project--info__card .project--info__resources li {
-  margin-bottom: 10px;
-}
-.project__page .project__layout--grid .project__layout--grid--col1 .organization--info__card {
-  background-color: #fff;
-  padding: 20px;
-}
-.project__page .project__layout--grid .project__layout--grid--col1 .organization--info__card h4 {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-.project__page .project__layout--grid .project__layout--grid--col1 .organization--info__card h3 {
-  font-size: 24px;
-}
-.project__page .project__layout--grid .project__layout--grid--col1 .organization--info__card h3 a {
-  color: #000;
-  text-decoration: none;
-}
-.project__page .project__layout--grid .project__layout--grid--col1 .organization--info__card h3 a:hover {
-  text-decoration: underline;
-}
-.project__page .project__layout--grid .project__layout--grid--col2 {
-  display: flex;
-  flex-direction: column;
-}
-.project__page .project__layout--grid .project__layout--grid--col2 .project--info--stats {
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  background-color: aquamarine;
-}
-.project__page .project__layout--grid .project__layout--grid--col2 .project-progress__bar--bg {
-  margin-top: 10px;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.3333333333);
-  border-radius: 5px;
-}
-.project__page .project__layout--grid .project__layout--grid--col2 .project-progress__bar--bg .project-progress__bar {
-  height: 10px;
-  background-color: rgba(0, 0, 0, 0.6117647059);
-  border-radius: 5px;
-}
-.project__page .project__layout--grid .project__layout--grid--col2 .donate--button,
-.project__page .project__layout--grid .project__layout--grid--col2 .donate--button:active,
-.project__page .project__layout--grid .project__layout--grid--col2 .donate--button:hover {
-  display: flex;
-  justify-content: center;
-  padding: 15px;
-  text-decoration: none;
-  background-color: lightcoral;
-  color: white;
-  font-weight: bold;
-  border-radius: 5px;
-}
-.project__page .project__layout--grid .project__layout--grid--col2 .donate--options {
-  margin: 30px 0;
-}
-.project__page .project__layout--grid .project__layout--grid--col2 .donate--options .donate--list {
-  display: flex;
-  flex-direction: column;
-  background-color: lightgreen;
-  border-radius: 5px;
+.checkbox__radio_text {
+  color: gray;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin: 10px 10px 0 10px;
 }
 
-.list-item {
-  list-style: none;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  margin: 10px;
+.checkbox__radio_btns {
+  display: inline;
+  align-items: center;
+  margin: 7px 10px 0 0;
+  color: gray;
 }
-.list-item a {
-  text-decoration: none;
-  color: #000;
+
+.searchpage__container {
+  border: 1px solid black;
+}
+
+.searchpage__controls {
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
-.list-item a .donate--amount {
-  font-size: 18px;
-  margin: 5px;
-  text-align: left;
+
+.searchpage__control {
+  margin: 5px 10px;
 }
-.list-item a .donate--summary {
-  font-size: 14px;
-  text-align: left;
-  margin: 0 10px;
+
+.searchpage__filter {
+  width: 300px;
+  height: 50px !important;
+}
+
+.createpost__container {
+  margin: 2rem 20%;
+  padding: 2rem;
+}
+
+.createpost__form {
+  display: flex !important;
+}
+
+.createpost__form_col {
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+  text-align: center;
+}
+
+.createpost__form_col .inputField {
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=main.css.map */
