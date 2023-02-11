@@ -9,4 +9,4 @@ route.post('/createProject', createProject);
 route.get('/getAccounts', getAccounts);
 // route.post('/fillDB', fillDB);
 
-module.exports = route
+module.exports = route;

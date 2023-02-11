@@ -25,10 +25,12 @@ app.use(routes);
 app.options('*',cors())
 const port = process.env.port;
 const uri = process.env.mongo;
-mongoose.connect(uri,
-    () => {
-        app.listen(port, () => {
-            console.log(`Server listening at http://localhost:${port}`);
-        }) 
-    }    
-).catch(err => {console.log("Error : ", err)});
+mongoose
+  .connect(uri, () => {
+    app.listen(port, () => {
+      console.log(`Server listening at http://localhost:${port}`);
+    });
+  })
+  .catch((err) => {
+    console.log("Error :", err);
+  });
