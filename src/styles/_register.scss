@@ -2,7 +2,7 @@
     display: flex;
     max-width: 350px;
     justify-content: center;
-    margin: 15vh auto;
+    margin: 5vh auto;
     padding: 40px 10px;
 }
 
@@ -28,6 +28,7 @@
 }
 
 .submitButton {
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -64,4 +65,24 @@
     &:hover {
         cursor: pointer;
     }
+}
+
+.checkboxField {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+}
+
+.checkbox__radio_text {
+    color: $text-secondary;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin: 10px 10px 0 10px;
+}
+
+.checkbox__radio_btns {
+    display: inline;
+    align-items: center;
+    margin: 7px 10px 0 0;
+    color: $text-secondary;
 }
