@@ -15,6 +15,8 @@ import {
   useLocation,
   Navigate,
 } from "react-router-dom";
+import store from "./store";
+import { Provider } from "react-redux";
 
 const dummyData = {
   id: 0,
@@ -84,32 +86,34 @@ const dummyData = {
 };
 
 function App() {
-  const authenticated = false;
+  const authenticated = true;
   return (
-    <div className="App">
-      <Router>
-        {authenticated && <Navbar />}
-        <Routes>
-          <Route path="/home" element={<HomePage />} />
-          <Route path="/search" element={<SearchPage />} />
+    <Provider store={store}>
+      <div className="App">
+        <Router>
+          {authenticated && <Navbar />}
+          <Routes>
+            <Route path="/home" element={<HomePage />} />
+            <Route path="/search" element={<SearchPage />} />
 
-          <Route path="/createPost" element={<CreatePost />} />
+            <Route path="/createPost" element={<CreatePost />} />
 
-          <Route
-            path="/login"
-            element={!authenticated ? <Login /> : <Navigate to="/home" />}
-          />
-          <Route
-            path="/register"
-            element={!authenticated ? <Register /> : <Navigate to="/home" />}
-          />
-          <Route
-            path="/project-page"
-            element={<ProjectPage project={dummyData} />}
-          />
-        </Routes>
-      </Router>
-    </div>
+            <Route
+              path="/login"
+              element={!authenticated ? <Login /> : <Navigate to="/home" />}
+            />
+            <Route
+              path="/register"
+              element={!authenticated ? <Register /> : <Navigate to="/home" />}
+            />
+            <Route
+              path="/project-page"
+              element={<ProjectPage project={dummyData} />}
+            />
+          </Routes>
+        </Router>
+      </div>
+    </Provider>
   );
 }
 
