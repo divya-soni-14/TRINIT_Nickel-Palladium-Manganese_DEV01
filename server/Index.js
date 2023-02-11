@@ -1,11 +1,17 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-const bodyParser = require('body-parser');
-const cors = require('cors');
-const routes = require('./Routes');
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const routes = require("./Routes");
 const app = express();
 dotenv.config();
+const corsOptions = {
+  origin: "*",
+  credentials: true, //access-control-allow-credentials:true
+  optionSuccessStatus: 200,
+};
+app.use(cors(corsOptions));
 // app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({ extended: true }));
 app.use(routes);
@@ -22,9 +28,10 @@ app.use(routes);
 //     exposedHeaders: ['Content-Type']
 // };
 // app.use(cors(corsOpts));
-app.options('*',cors())
+// app.options("*", cors());
 const port = process.env.port;
 const uri = process.env.mongo;
+
 mongoose
   .connect(uri, () => {
     app.listen(port, () => {
