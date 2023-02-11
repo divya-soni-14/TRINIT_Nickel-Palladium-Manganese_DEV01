@@ -15,8 +15,6 @@ import {
   useLocation,
   Navigate,
 } from "react-router-dom";
-import SearchPage from "./components/SearchPage";
-import CreatePost from "./components/CreatePost";
 
 const dummyData = {
   id: 0,

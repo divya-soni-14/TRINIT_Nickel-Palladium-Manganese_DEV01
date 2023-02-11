@@ -12,13 +12,8 @@ const SearchPage = () => {
     setSearchTerm(event.target.value);
     const newFilter = BookData.filter((value) => {
       let title = value.title.toString().toLowerCase();
-<<<<<<< HEAD
       let newSearchTerm = searchTerm.toString().toLowerCase();
       return title.includes(newSearchTerm);
-=======
-      let searchTerm = searchTerm.toString().toLowerCase();
-      return title.includes(searchTerm);
->>>>>>> f3dc3610068c9ee3e1debf3bd329451f8fb9e276
     });
     setFilteredData(newFilter);
     console.log(filteredData);
@@ -65,7 +60,6 @@ const SearchPage = () => {
               isMulti
               placeholder={"Filter by Category"}
               onChange={handleCategoryDropDown}
-<<<<<<< HEAD
             />
           </div>
           <div className="searchpage__control searchpage__filter">
@@ -76,8 +70,6 @@ const SearchPage = () => {
               isMulti
               placeholder={"Filter by Location"}
               onChange={handleCategoryDropDown}
-=======
->>>>>>> f3dc3610068c9ee3e1debf3bd329451f8fb9e276
             />
           </div>
         </div>
