@@ -4,19 +4,20 @@ import BookData from "../data.json";
 import makeAnimated from "react-select/animated";
 
 const SearchPage = () => {
+  const [nameFilteredData, setNameFiltered] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState([]);
-
   const handleFilter = (event) => {
     setSearchTerm(event.target.value);
     const newFilter = BookData.filter((value) => {
       let title = value.title.toString().toLowerCase();
-      let searchTerm = searchTerm.toString().toLowerCase();
-      return title.includes(searchTerm);
+      let newSearchTerm = searchTerm.toString().toLowerCase();
+      return title.includes(newSearchTerm);
     });
+    setNameFiltered(newFilter);
     setFilteredData(newFilter);
-    console.log(filteredData);
+    console.log(newFilter);
   };
 
   const handleCategoryDropDown = (event) => {
@@ -26,11 +27,26 @@ const SearchPage = () => {
     });
     setSelectedCategory(newCategories);
     console.log(newCategories);
+
+    let currData = nameFilteredData.length > 0 ? nameFilteredData : BookData;
+    console.log(currData, filteredData.length);
+    let newCurrData = currData.filter((item) => {
+      let value = item.author.toLowerCase();
+      let ans = 0;
+      newCategories.map((cat) => {
+        let compareTerm = cat.toLowerCase();
+        if (value.includes(compareTerm)) return 1;
+      });
+      return ans;
+    });
+
+    currData = newCurrData;
+    setFilteredData(currData);
   };
 
   const options = [
-    { value: "chocolate", label: "Chocolate" },
-    { value: "strawberry", label: "Strawberry" },
+    { value: "George Eliot", label: "George Eliot" },
+    { value: "Shakespeare", label: "Shakespeare" },
     { value: "vanilla", label: "Vanilla" },
   ];
   const animatedComponents = makeAnimated();
@@ -60,17 +76,29 @@ const SearchPage = () => {
               onChange={handleCategoryDropDown}
             />
           </div>
+          <div className="searchpage__control searchpage__filter">
+            <Select
+              closeMenuOnSelect={false}
+              components={animatedComponents}
+              options={options}
+              isMulti
+              placeholder={"Filter by Location"}
+              onChange={handleCategoryDropDown}
+            />
+          </div>
         </div>
       </div>
       <div className="search__results">
-        {searchTerm &&
-          filteredData.map((book) => {
-            return (
-              <>
-                <p>{book.title}</p> <br />{" "}
-              </>
-            );
-          })}
+        {filteredData.map((book) => {
+          return (
+            <>
+              <p>
+                {book.title} by {book.author}{" "}
+              </p>{" "}
+              <br />{" "}
+            </>
+          );
+        })}
       </div>
     </div>
   );

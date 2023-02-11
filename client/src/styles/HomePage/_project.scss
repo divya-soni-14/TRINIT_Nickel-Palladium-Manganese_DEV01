@@ -5,7 +5,7 @@
   background-color: $secondary-color-darker;
   box-shadow: 0px 4px 6px #00000029;
   border-radius: 10px;
-  padding: 20px;
+  padding: 30px 15px;
   margin: $margin-internal;
 
   &--image {
@@ -29,7 +29,7 @@
 
     & .project__font--secondary {
       font-size: 14px;
-      color: #0000009c;
+      color: $text-secondary;
       text-align: center;
       margin-bottom: 10px;
     }
@@ -37,7 +37,7 @@
     & .project__font--primary {
       font-size: 20px;
       font-weight: bold;
-      color: #000000;
+      color: $text-primary;
       text-align: center;
       margin-bottom: 10px;
     }

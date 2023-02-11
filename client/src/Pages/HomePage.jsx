@@ -1,6 +1,7 @@
 import React from "react";
 import Sidebar from "../components/HomePage/Sidebar";
 import Feed from "../components/HomePage/Feed";
+import Statistics from "../components/HomePage/Statistics";
 const HomePage = () => {
   return (
     <div className="homepage__container">
@@ -9,6 +10,7 @@ const HomePage = () => {
         <Sidebar />
       </div>
       <div className="homepage__middle_sidebar sizeup__mobile">
+        <Statistics />
         <Feed />
       </div>
 

@@ -1,5 +1,5 @@
 .project__page {
-  padding: 20px;
+  padding: 20px 10%;
 
   .project--info {
     font-size: 12px;
@@ -33,7 +33,7 @@
       flex-direction: column;
       .project--info__card {
         background-color: #fff;
-        padding: 20px;
+        padding: 2rem;
         margin-bottom: 20px;
         text-align: left;
         h4 {

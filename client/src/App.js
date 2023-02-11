@@ -20,7 +20,7 @@ import UserProfilePage from "./components/UserProfilePage";
 import { dummyData, profileData, userProfileData } from "./data";
 
 function App() {
-  const authenticated = true;
+  const authenticated = false;
   return (
     <div className="App">
       <Router>

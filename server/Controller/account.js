@@ -12,8 +12,8 @@ const createUser = async (req, res) => {
             address: req.body.address,
             contact: req.body.contact,
         });
-        if (req.dp)
-            user.dp = req.dp;
+        if (req.body.dp)
+            user.dp = req.body.dp;
         try {
             await user.save();
             return {
@@ -42,16 +42,16 @@ const createNGO = async (req, res) => {
             address: req.body.address,
             contact: req.body.contact,
         });
-        if (req.dp)
-            ngo.dp = req.dp;
+        if (req.body.dp)
+            ngo.dp = req.body.dp;
         else{
                 let newString = req.body.name.replace(/\s+/g,' ').trim();
                 let finalString = newString.split(' ').join('+');
                 const url = 'https://www.designmantic.com/logo-images/166751.png?company=REPLACE&slogan=&verify=1';
                 ngo.dp = url.replace('REPLACE',finalString);
             }
-        if (req.website)
-            ngo.website = req.website;
+        if (req.body.website)
+            ngo.website = req.body.website;
         try {
             await ngo.save();
             return {
@@ -73,6 +73,7 @@ const createNGO = async (req, res) => {
 }
 
 exports.createAccount = async (req, res) => {
+    console.log(req.body);
         const hasher = async() => {
             return await bcrypt.hash(req.body.password,12);
         }
@@ -96,12 +97,6 @@ exports.createAccount = async (req, res) => {
             console.log(account);
             const finder = mongoose.Types.ObjectId(account.id);
             if(account.type == 'user')
-                // User.updateOne({_id:finder},{ $set: {accountId:account._id} }, (error) => {
-                //     if (error) {
-                //         console.error(error);
-                //     } else {
-                //         console.log("User successfully updated!");
-                //     }});
                 {
                     User.findOne({_id:finder}, (err,user) => {
                         console.log(user);
@@ -110,12 +105,6 @@ exports.createAccount = async (req, res) => {
                     })
                 }
             else
-                // NGO.updateOne({_id:finder},{ $set: {accountId:account._id} }, (error) => {
-                //     if (error) {
-                //         console.error(error);
-                //     } else {
-                //         console.log("ngo successfully updated!");
-                //     }});
                 {
                     NGO.findOne({_id:finder}, (err,ngo) => {
                         console.log(ngo);
@@ -133,4 +122,12 @@ exports.createAccount = async (req, res) => {
             message: err === "Email Taken" ? "Email address already in use" : "Error creating account",
         });
     });
+}
+
+exports.getAccounts = (req,res) => {
+    Account.find().then((accounts)=>{
+        res.status(200).json(accounts);
+    }).catch(err => {
+        res.status(401).json({message:"bruh"});
+    })
 }
